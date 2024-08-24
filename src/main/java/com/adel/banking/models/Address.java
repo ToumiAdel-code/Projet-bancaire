@@ -13,17 +13,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Contact {
+public class Address {
     @Id
     @GeneratedValue
     private Integer id;
 
-    private String firstname;
+    private String street;
 
-    private String lastname;
+    private Integer houseNumber;
 
-    private String email;
+    private Integer zipCode;
 
-    private String iban;
+    private String citiy;
 
+    private String country;
 }

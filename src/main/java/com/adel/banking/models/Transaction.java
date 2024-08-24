@@ -1,12 +1,13 @@
 package com.adel.banking.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
@@ -17,4 +18,15 @@ public class Transaction {
     @Id
     @GeneratedValue
     private Integer id;
+
+    private BigDecimal amount;
+
+    @Enumerated(EnumType.STRING)
+    private TransactionType type;
+
+    private String destinationIban;
+
+    private LocalDateTime creationDate;
+
+    private LocalDateTime lastUpdated;
 }

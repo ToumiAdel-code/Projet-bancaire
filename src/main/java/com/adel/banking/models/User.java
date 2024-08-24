@@ -27,4 +27,8 @@ public class User {
     private String email;
 
     private  String password;
+
+    private  Boolean active;
+
+    //private Address address;
 }
